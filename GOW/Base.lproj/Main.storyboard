@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -32,6 +33,7 @@
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0qv-4c-wCx">
                                             <rect key="frame" x="10" y="0.0" width="40" height="40"/>
+                                            <color key="tintColor" name="GOWRed"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="Ni8-VX-OVg"/>
                                                 <constraint firstAttribute="width" constant="40" id="NtI-Un-sX2"/>
@@ -43,7 +45,7 @@
                                                 <constraint firstAttribute="height" constant="40" id="K4e-T5-rSb"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" name="CGFLocustResistance" family="CGF Locust Resistance" pointSize="17"/>
-                                            <nil key="textColor"/>
+                                            <color key="textColor" name="GOWRed"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -124,7 +126,7 @@
             </objects>
             <point key="canvasLocation" x="1935.1145038167938" y="-42.253521126760567"/>
         </scene>
-        <!--Item-->
+        <!--CGO-->
         <scene sceneID="1eG-yE-34I">
             <objects>
                 <viewController id="udB-f5-0uW" customClass="WeaponsController" customModule="GOW" customModuleProvider="target" sceneMemberID="viewController">
@@ -261,7 +263,15 @@
                             <constraint firstAttribute="bottom" secondItem="GmC-Fl-JAW" secondAttribute="bottom" id="yL7-8V-5P1"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="6e7-ar-fGI"/>
+                    <tabBarItem key="tabBarItem" title="CGO" id="6e7-ar-fGI">
+                        <imageReference key="image" image="gearshape.fill" catalog="system" renderingMode="hierarchical-single">
+                            <hierarchicalColors>
+                                <color name="GOWRed"/>
+                                <color systemColor="secondaryLabelColor"/>
+                                <color systemColor="tertiaryLabelColor"/>
+                            </hierarchicalColors>
+                        </imageReference>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="ZEU-JI-NYp"/>
                     <connections>
                         <outlet property="gowTableView" destination="GmC-Fl-JAW" id="oOU-jS-2Mq"/>
@@ -295,9 +305,11 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="q1Z-U3-kUe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="E5o-qF-gPT"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gD6-RH-zgo">
+                    <tabBar key="tabBar" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gD6-RH-zgo">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="GOWBlack1"/>
+                        <color key="selectedImageTintColor" name="GOWRed"/>
                     </tabBar>
                     <connections>
                         <segue destination="udB-f5-0uW" kind="relationship" relationship="viewControllers" id="FPE-Io-Yoz"/>
@@ -309,15 +321,25 @@
         </scene>
     </scenes>
     <resources>
+        <image name="gearshape.fill" catalog="system" width="128" height="123"/>
         <image name="headerGOW" width="393" height="346"/>
         <namedColor name="GOWBlack1">
-            <color red="0.058823529411764705" green="0.031372549019607843" blue="0.039215686274509803" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.059000000357627869" green="0.030999999493360519" blue="0.039000000804662704" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="GOWRed">
+            <color red="0.63899999856948853" green="0.050999999046325684" blue="0.054999999701976776" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="GOWText">
-            <color red="0.54117647058823526" green="0.52156862745098043" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.54100000858306885" green="0.5220000147819519" blue="0.5690000057220459" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="tertiaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29803921568627451" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
