@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  GOW
+
+  Created by Rafael González on 05/08/23.
+  
+*/
+"menu.option.videogames" = "Video gioco";
+"menu.option.weapons" = "Armi";
+"menu.option.characters" = "Caratteri";
+"menu.option.merchandise" = "Merce";
