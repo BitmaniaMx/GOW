@@ -39,7 +39,7 @@
                                                 <constraint firstAttribute="width" constant="40" id="NtI-Un-sX2"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aye-rX-apH">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aye-rX-apH">
                                             <rect key="frame" x="60" y="0.0" width="323" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="40" id="K4e-T5-rSb"/>
@@ -87,7 +87,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y28-nM-KBt">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <rect key="frame" x="0.0" y="155" width="393" height="663"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="sMY-JQ-OLh" appends="YES" id="NIs-fo-dKW"/>
@@ -129,20 +129,20 @@
         <!--CGO-->
         <scene sceneID="1eG-yE-34I">
             <objects>
-                <viewController id="udB-f5-0uW" customClass="WeaponsController" customModule="GOW" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="CGO" id="udB-f5-0uW" customClass="WeaponsController" customModule="GOW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fdm-jZ-cX6">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="headerGOW" translatesAutoresizingMaskIntoConstraints="NO" id="JNr-Fx-QDH">
-                                <rect key="frame" x="0.0" y="103" width="393" height="200"/>
+                                <rect key="frame" x="0.0" y="155" width="393" height="200"/>
                                 <color key="backgroundColor" name="GOWBlack1"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="uBg-ej-w0p"/>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GmC-Fl-JAW">
-                                <rect key="frame" x="0.0" y="313" width="393" height="539"/>
+                                <rect key="frame" x="0.0" y="365" width="393" height="487"/>
                                 <color key="backgroundColor" name="GOWBlack1"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell1" rowHeight="300" id="b1I-h2-7GY" customClass="weaponCell" customModule="GOW" customModuleProvider="target">
@@ -169,7 +169,7 @@
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndD-Qw-Fgt">
                                                     <rect key="frame" x="20" y="231" width="353" height="58"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                     <color key="textColor" name="GOWText"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -272,7 +272,7 @@
                             </hierarchicalColors>
                         </imageReference>
                     </tabBarItem>
-                    <navigationItem key="navigationItem" id="ZEU-JI-NYp"/>
+                    <navigationItem key="navigationItem" title="CGO" largeTitleDisplayMode="always" id="ZEU-JI-NYp"/>
                     <connections>
                         <outlet property="gowTableView" destination="GmC-Fl-JAW" id="oOU-jS-2Mq"/>
                     </connections>
@@ -286,9 +286,10 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qun-wr-x50" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tr9-YO-qLN">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="tr9-YO-qLN">
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" name="GOWText"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -299,12 +300,12 @@
             </objects>
             <point key="canvasLocation" x="29.770992366412212" y="-42.253521126760567"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Weapons-->
         <scene sceneID="xJi-N7-YNm">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="q1Z-U3-kUe" sceneMemberID="viewController">
+                <tabBarController title="Weapons" automaticallyAdjustsScrollViewInsets="NO" id="q1Z-U3-kUe" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="E5o-qF-gPT"/>
+                    <navigationItem key="navigationItem" title="Weapons" id="E5o-qF-gPT"/>
                     <tabBar key="tabBar" opaque="NO" alpha="0.84999999999999998" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gD6-RH-zgo">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>

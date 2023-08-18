@@ -21,6 +21,7 @@
 		7B0A2BCF2A7ECC3C0011321F /* weaponCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A2BCE2A7ECC3C0011321F /* weaponCell.swift */; };
 		7B0A2BD12A7ECEEF0011321F /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0A2BD02A7ECEEF0011321F /* Weapon.swift */; };
 		7B0A2BD52A7EDE400011321F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7B0A2BD32A7EDE400011321F /* Localizable.strings */; };
+		7BF9D2FB2A86FF3C004D9122 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF9D2FA2A86FF3C004D9122 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		7B0A2BD62A7EDF870011321F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Main.strings; sourceTree = "<group>"; };
 		7B0A2BD72A7EDF870011321F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		7B0A2BD82A7EDF880011321F /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = ../it.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7BF9D2FA2A86FF3C004D9122 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		7B0A2BA72A7E9BFE0011321F /* GOW */ = {
 			isa = PBXGroup;
 			children = (
+				7BCC990E2A8554E900E14EFC /* Extensions */,
 				7B0A2BD22A7EDDD60011321F /* Localization */,
 				7B0A2BC52A7EA9E40011321F /* View */,
 				7B0A2BC22A7EA8170011321F /* Model */,
@@ -132,6 +135,14 @@
 				7B0A2BD32A7EDE400011321F /* Localizable.strings */,
 			);
 			path = Localization;
+			sourceTree = "<group>";
+		};
+		7BCC990E2A8554E900E14EFC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7BF9D2FA2A86FF3C004D9122 /* StringExtension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +227,7 @@
 				7B0A2BCF2A7ECC3C0011321F /* weaponCell.swift in Sources */,
 				7B0A2BAB2A7E9BFE0011321F /* SceneDelegate.swift in Sources */,
 				7B0A2BC02A7EA5B90011321F /* HomeViewController.swift in Sources */,
+				7BF9D2FB2A86FF3C004D9122 /* StringExtension.swift in Sources */,
 				7B0A2BD12A7ECEEF0011321F /* Weapon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
