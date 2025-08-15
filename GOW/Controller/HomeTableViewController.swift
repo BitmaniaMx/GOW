@@ -8,6 +8,27 @@
 import UIKit
 
 class HomeTableViewController: UITableViewController {
+    
+    @IBOutlet var menuTableView: UITableView!
+    
+    let menuOptions : [MenuOption] = [
+            MenuOption(
+                title:"Videogames",
+                image:"gamecontroller.fill",
+                segue:"gamesSegue")
+            , MenuOption(
+                title:"Weapons",
+                image:"shield.fill",
+                segue:"weaponsSegue")
+            , MenuOption(
+                title:"Characters",
+                image:"person.crop.rectangle.stack.fill",
+                segue:"charactersSegue")
+            ,MenuOption(
+                title:"Merchandise",
+                image:"shippingbox.fill",
+                segue:"merchandiseSegue")
+        ]
 
     override func viewDidLoad() {
         super.viewDidLoad()

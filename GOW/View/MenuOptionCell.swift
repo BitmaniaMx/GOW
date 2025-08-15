@@ -8,7 +8,10 @@
 import UIKit
 
 class MenuOptionCell: UITableViewCell {
-
+    @IBOutlet weak var menuImage: UIImageView!
+    
+    @IBOutlet weak var menuLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
