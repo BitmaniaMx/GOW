@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="G53-VJ-ltE" customClass="MenuOptionCell" customModule="GOW" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="G53-VJ-ltE" customClass="MenuOptionCell" customModule="GOW" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="50" width="393" height="40.333332061767578"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="G53-VJ-ltE" id="7lv-Gf-xcJ">
@@ -63,8 +63,8 @@
                     <navigationItem key="navigationItem" id="61g-iH-ejz"/>
                     <connections>
                         <outlet property="menuTableView" destination="RDQ-eo-3uk" id="hAJ-1w-6Vm"/>
-                        <segue destination="oan-aH-acK" kind="show" id="Xgr-SW-n7e"/>
-                        <segue destination="jFU-WY-NwN" kind="show" id="Q8Q-Rg-azd"/>
+                        <segue destination="oan-aH-acK" kind="show" identifier="gamesSegue" id="Xgr-SW-n7e"/>
+                        <segue destination="jFU-WY-NwN" kind="show" identifier="weaponsSegue" id="Q8Q-Rg-azd"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JF5-mu-xYW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
