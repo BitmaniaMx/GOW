@@ -64,7 +64,12 @@ class HomeTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard menuOptions[indexPath.row].segue != "" else {
+            return
+        }
         performSegue(withIdentifier: menuOptions[indexPath.row].segue, sender: self)
+        
     }
 
 
