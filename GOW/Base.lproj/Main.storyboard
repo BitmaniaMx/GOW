@@ -71,19 +71,54 @@
             </objects>
             <point key="canvasLocation" x="1362.5954198473282" y="-65.492957746478879"/>
         </scene>
-        <!--View Controller-->
+        <!--Games View Controller-->
         <scene sceneID="zvt-Pi-qji">
             <objects>
-                <viewController id="oan-aH-acK" sceneMemberID="viewController">
+                <viewController id="oan-aH-acK" customClass="GamesViewController" customModule="GOW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZnL-MS-sC7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5Nx-U4-D6n">
+                                <rect key="frame" x="16" y="162" width="361" height="622"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="LNf-pv-keb" appends="YES" id="ivN-nu-Ykd"/>
+                                    <outletCollection property="gestureRecognizers" destination="6KZ-ya-8JY" appends="YES" id="hhc-u8-SVQ"/>
+                                </connections>
+                            </imageView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="3pj-Zc-fix">
+                                <rect key="frame" x="160" y="718" width="73" height="26"/>
+                            </pageControl>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mNO-O0-18s"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mNO-O0-18s" firstAttribute="trailing" secondItem="5Nx-U4-D6n" secondAttribute="trailing" constant="16" id="Q8c-Lx-bAx"/>
+                            <constraint firstItem="5Nx-U4-D6n" firstAttribute="leading" secondItem="mNO-O0-18s" secondAttribute="leading" constant="16" id="UmR-uY-Smw"/>
+                            <constraint firstItem="mNO-O0-18s" firstAttribute="bottom" secondItem="3pj-Zc-fix" secondAttribute="bottom" constant="40" id="bPy-cN-qog"/>
+                            <constraint firstItem="5Nx-U4-D6n" firstAttribute="bottom" secondItem="mNO-O0-18s" secondAttribute="bottom" id="l0A-nH-KIU"/>
+                            <constraint firstItem="5Nx-U4-D6n" firstAttribute="top" secondItem="mNO-O0-18s" secondAttribute="top" id="lja-aZ-xG6"/>
+                            <constraint firstItem="3pj-Zc-fix" firstAttribute="centerX" secondItem="ZnL-MS-sC7" secondAttribute="centerX" id="zUB-3U-fjz"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HGr-ve-oOC"/>
+                    <connections>
+                        <outlet property="gamePoster" destination="5Nx-U4-D6n" id="qWM-SD-MlK"/>
+                        <outlet property="gamePosterController" destination="3pj-Zc-fix" id="QAZ-Vm-VIb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vca-FY-oEa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="LNf-pv-keb" userLabel="Left Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="leftSwipeDone:" destination="oan-aH-acK" id="SN3-EH-AZd"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="6KZ-ya-8JY" userLabel="Right Swipe Gesture Recognizer">
+                    <connections>
+                        <action selector="rightSwipeDone:" destination="oan-aH-acK" id="YRF-0w-kQp"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="2440.4580152671756" y="-394.36619718309862"/>
         </scene>
