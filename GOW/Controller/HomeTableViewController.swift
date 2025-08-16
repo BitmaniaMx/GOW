@@ -33,11 +33,16 @@ class HomeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        for family in UIFont.familyNames {
+                    if family == "CGFLocustResistance" || family == "Coalition" {
+                        print("Familia de fuentes: \(family)")
+                    }
+                    for name in UIFont.fontNames(forFamilyName: family) {
+                        if name == "CGFLocustResistance" || family == "Coalition" {
+                            print(" - Fuente: \(name)")
+                        }
+                    }
+                }
     }
 
     // MARK: - Table view data source
@@ -58,6 +63,7 @@ class HomeTableViewController: UITableViewController {
         // Configure the cell...
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MenuOptionCell
         cell.menuImage.image = UIImage(systemName: menuOptions[indexPath.row].image)
+        cell.menuLabel.setCustomFont(fontName: "CGF Locust Resistance", style: .title1)
         cell.menuLabel.text = menuOptions[indexPath.row].title
 
         return cell

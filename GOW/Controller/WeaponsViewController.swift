@@ -47,7 +47,7 @@ class WeaponsViewController: UIViewController {
             Weapon(
             name: "Boomshot Grenade Launcher",
             description: "Was a single-shot, pump-action grenade launcher designed and used primarily by Locust, specifically the Boomer.",
-            poster: "BoomshotGrenadeLauncher"
+            poster: "Boomshot"
         ),
             Weapon(
                 name: "Hammerburst II",
@@ -76,6 +76,13 @@ class WeaponsViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        let tabBarItem = self.tabBarItem.tag
+        if tabBarItem == Constats.CGO {
+            arrayWeapons = cgoWeapons
+        }
+        else{
+            arrayWeapons = locusWeapons
+        }
     }
     
 
@@ -94,15 +101,15 @@ class WeaponsViewController: UIViewController {
 
 extension WeaponsViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return cgoWeapons.count
+        return arrayWeapons.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! WeaponCell
         
-        cell.weaponName.text = cgoWeapons[indexPath.row].name
-        cell.weaponPoster.image = UIImage(named: cgoWeapons[indexPath.row].poster)
-        cell.weaponDescription.text = cgoWeapons[indexPath.row].description
+        cell.weaponName.text = arrayWeapons[indexPath.row].name
+        cell.weaponPoster.image = UIImage(named: arrayWeapons[indexPath.row].poster)
+        cell.weaponDescription.text = arrayWeapons[indexPath.row].description
         
         return cell
     }
