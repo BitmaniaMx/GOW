@@ -13,63 +13,64 @@ class WeaponsViewController: UIViewController {
     @IBOutlet weak var weaponsTableView: UITableView!
     
     var arrayWeapons : [Weapon] = []
-    //    CGO Weapons
-        let cgoWeapons : [Weapon] = [
-            Weapon(
-                name: "Mark 1 Lancer Assault Rifle",
-                description: "Dubbed the Retro Lancer during the Lambent Pandemic, was the predecessor to the Mark 2 Lancer Assault Rifle. Formerly the main assault rifle of the Coalition of Ordered Governments Army, the Mark 1 Assault Rifle was used throughout the Pendulum War.",
-                poster: "Mark1LancerAssaultRifle"
-                ),
-            Weapon(
-                name: "Mark 2 Lancer Assault Rifle",
-                description: "An upgrade to the Mark 1 Lancer Assault Rifle, produced with a chainsaw bayonet, increased accuracy, lower recoil, and larger ammunition carrying capacity but less firepower compared to its predecessor.",
-                poster: "LancerMk2"
-                ),
-            Weapon(
-                name: "Longshot Sniper Rifle",
-                description: "Was a high-caliber, single-shot, bolt-action sniper rifle. Created by the Coalition of Ordered Governments during the Pendulum Wars, the Longshot was used even seventeen years after Emergence Day.",
-                poster: "LongshotSniperRifle"
-                ),
-            Weapon(
-                name: "Hammer of Dawn",
-                description: "The Hammer of Dawn was a COG Imulsion-energized, orbital, satellite-based laser. Its key components were invented by the UIR scientist Mauris Ivo and completed by professor Adam Fenix after it was stolen during Operation: Leveler.",
-                poster: "HammerOfDawn"
-                ),
-            Weapon(
-                name: "MX8 Snub Pistol",
-                description: "Was the standard sidearm for Coalition of Ordered Governments armed forces personnel",
-                poster: "SnubPistol"
-            )
-            ]
-        
-    //    Locus Weapons
-        let locusWeapons : [Weapon] = [
-            Weapon(
-            name: "Boomshot Grenade Launcher",
-            description: "Was a single-shot, pump-action grenade launcher designed and used primarily by Locust, specifically the Boomer.",
-            poster: "Boomshot"
-        ),
-            Weapon(
-                name: "Hammerburst II",
-                description: "was the Locust standard-issue, high-powered assault rifle. It is often referred to as the Locust counterpart to the COG Lancer Assault Rifle.",
-                poster: "HammerburstII"
-            ),
-        Weapon(
-            name: "Mulcher",
-            description: "The Mulcher is a heavy, hand-cranked, rotary gatling gun developed by the Coalition of Ordered Governments.",
-            poster: "Mulcher"
-        ),
-        Weapon(
-            name: "Bolo Grenade",
-            description: "The Bolo Grenade, otherwise known as the Fragmentation Grenade, was the standard-issue fragmentation grenade used by the Coalition of Ordered Governments, the Locust Horde and the Swarm.",
-            poster: "BoloGrenade"
-        ),
-        Weapon(
-            name: "Boltok Pistol",
-            description: "was the standard-issue sidearm of the Locust, specifically the Drones. The pistol continues the Locust weapon-design philosophy of creating weapons with an emphasis towards brute force.",
-            poster: "BoltokPistol"
-        )
-        ]
+       //    CGO Weapons
+           let cgoWeapons : [Weapon] = [
+               Weapon(
+                   name: "weapon.name.lancer",
+                   description: "weapon.description.lancer",
+                   poster: "Mark1LancerAssaultRifle"
+                   ),
+               Weapon(
+                   name: "weapon.name.lancer2",
+                   description: "weapon.description.lancer2",
+                   poster: "LancerMk2"
+                   ),
+               Weapon(
+                   name: "weapon.name.sniper",
+                   description: "weapon.description.sniper",
+                   poster: "LongshotSniperRifle"
+
+                   ),
+               Weapon(
+                   name: "weapon.name.hammer_of_dawn",
+                   description: "weapon.description.hammer_of_dawn",
+                   poster: "HammerOfDawn"
+                   ),
+               Weapon(
+                   name: "weapon.name.mx8",
+                   description: "weapon.description.mx8",
+                   poster: "SnubPistol"
+               )
+               ]
+           
+       //    Locus Weapons
+           let locusWeapons : [Weapon] = [
+               Weapon(
+               name: "weapon.name.boomshot",
+               description: "weapon.description.boomshot",
+               poster: "Boomshot"
+           ),
+               Weapon(
+                   name: "weapon.name.hammerburstii",
+                   description: "weapon.description.hammerburstii",
+                   poster: "HammerburstII"
+               ),
+           Weapon(
+               name: "weapon.name.mulcher",
+               description: "weapon.description.mulcher",
+               poster: "Mulcher"
+           ),
+           Weapon(
+               name: "weapon.name.bolo_grenade",
+               description: "weapon.description.bolo_grenade",
+               poster: "BoloGrenade"
+           ),
+           Weapon(
+               name: "weapon.name.boltok",
+               description: "weapon.description.boltok",
+               poster: "BoltokPistol"
+           )
+           ]
 
 
     override func viewDidLoad() {
@@ -107,9 +108,9 @@ extension WeaponsViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! WeaponCell
         
-        cell.weaponName.text = arrayWeapons[indexPath.row].name
+        cell.weaponName.text = arrayWeapons[indexPath.row].name.localized
         cell.weaponPoster.image = UIImage(named: arrayWeapons[indexPath.row].poster)
-        cell.weaponDescription.text = arrayWeapons[indexPath.row].description
+        cell.weaponDescription.text = arrayWeapons[indexPath.row].description.localized
         
         return cell
     }

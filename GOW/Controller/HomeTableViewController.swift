@@ -11,24 +11,26 @@ class HomeTableViewController: UITableViewController {
     
     @IBOutlet var menuTableView: UITableView!
     
-    let menuOptions : [MenuOption] = [
-            MenuOption(
-                title:"Videogames",
-                image:"gamecontroller.fill",
-                segue:"gamesSegue")
-            , MenuOption(
-                title:"Weapons",
-                image:"shield.fill",
-                segue:"weaponsSegue")
-            , MenuOption(
-                title:"Characters",
-                image:"person.crop.rectangle.stack.fill",
-                segue:"charactersSegue")
-            ,MenuOption(
-                title:"Merchandise",
-                image:"shippingbox.fill",
-                segue:"merchandiseSegue")
-        ]
+        let menuOptions : [MenuOption] = [
+                    MenuOption(
+                        title:"menu.option.videogames",
+                        image:"gamecontroller.fill",
+                        segue:"gamesSegue")
+                    , MenuOption(
+                        title:"menu.option.weapons",
+                        image:"shield.fill",
+                        segue:"weaponsSegue")
+                    , MenuOption(
+                        title:"menu.option.characters",
+                        image:"person.crop.rectangle.stack.fill",
+                        segue:"charactersSegue")
+                    ,MenuOption(
+                        title:"menu.option.merchandise",
+                        image:"shippingbox.fill",
+                        segue:"merchandiseSegue")
+                ]
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +66,7 @@ class HomeTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MenuOptionCell
         cell.menuImage.image = UIImage(systemName: menuOptions[indexPath.row].image)
         cell.menuLabel.setCustomFont(fontName: "CGF Locust Resistance", style: .title1)
-        cell.menuLabel.text = menuOptions[indexPath.row].title
+        cell.menuLabel.text = menuOptions[indexPath.row].title.localized
 
         return cell
     }
